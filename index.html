@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            font-size: 20px;
+        }
+        button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 22px;
+            cursor: pointer;
+            background-color: gold;
+            border: none;
+            color: black;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        .menu {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background: #222;
+            padding-top: 20px;
+            transition: 0.3s;
+            box-shadow: 2px 0px 10px rgba(255, 255, 255, 0.2);
+        }
+        .menu a, .menu button {
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            text-align: left;
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .menu a:hover, .menu button:hover {
+            background: #444;
+        }
+        .menu-icon {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu" id="sideMenu">
+        <a href="#" onclick="history.back()">⬅ Back</a>
+        <a href="#" onclick="history.forward()">➡ Forward</a>
+        <button onclick="saveFile()">💾 Save</button>
+        <button onclick="loadFile()">📂 Load</button>
+    </div>
+    
+    <span class="menu-icon" onclick="toggleMenu()">📁</span>
+    <h1>Welcome to Our Website!</h1>
+    <p>Explore and enjoy your stay.</p>
+    <p><strong>Support:</strong> support@game.com</p>
+    <p><strong>Bugs:</strong> bugs@game.com</p>
+
+    <button onclick="openCharacterPage()">Create Character</button>
+
+    <script>
+        function toggleMenu() {
+            let menu = document.getElementById("sideMenu");
+            menu.style.left = menu.style.left === "0px" ? "-250px" : "0px";
+        }
+        function openCharacterPage() {
+            window.open("character.html", "_blank", "width=400,height=700");
+        }
+        function saveFile() {
+            alert("Save feature coming soon!");
+        }
+        function loadFile() {
+            alert("Load feature coming soon!");
+        }
+    </script>
+</body>
+</html>
